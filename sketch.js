@@ -1,3 +1,4 @@
+var canvas;
 var xspacing = 16;    // Distance between each horizontal location
 var w;                // Width of entire wave
 var theta = 0.0;      // Start angle at 0
@@ -7,7 +8,7 @@ var dx;               // Value for incrementing x
 var yvalues;  // Using an array to store height values for the wave
 
 function setup() {
-    createCanvas(window.innerWidth, window.innerHeight);
+canvas = createCanvas(window.innerWidth, window.innerHeight);
   w = width+16;
   dx = (TWO_PI / period) * xspacing;
   yvalues = new Array(floor(w/xspacing));
